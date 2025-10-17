@@ -3,18 +3,20 @@ using Umbraco.Cms.Infrastructure.HybridCache;
 
 namespace Demo.Web.HybridCache;
 
-public class BlogSeedKeyProvider : IDocumentSeedKeyProvider
+public class MySeedKeyProvider : IDocumentSeedKeyProvider
 {
     private readonly IDocumentNavigationQueryService _navigationService;
 
-    public BlogSeedKeyProvider(IDocumentNavigationQueryService navigationService)
+    public MySeedKeyProvider(IDocumentNavigationQueryService navigationService)
     {
         _navigationService = navigationService;
     }
-
+ 
     public ISet<Guid> GetSeedKeys()
     {
-        _navigationService.TryGetDescendantsKeys(new("31523089-f648-4883-9087-ef9a0b83129f"), out var keys);
+
+        // Taken from the Authors node ID
+        _navigationService.TryGetDescendantsKeys(new("8b97891b-bb88-4c50-827d-a458c3c2b7bb"), out var keys);
 
         return new HashSet<Guid>(keys);
     }
