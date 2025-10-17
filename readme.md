@@ -27,6 +27,10 @@ dotnet run
     - Import Settings first
         - Check doc types have changed
     - Go back, select existing migration and import Content
+    - Check content has been migrated
+    - Do Migration
+    - Wipe the uSync folder
+    
 
 3. Upgrade site to 17
 
