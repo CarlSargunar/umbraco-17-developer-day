@@ -13,5 +13,16 @@ Use NPM v22 LTS
 2. Start the back end in a different terminal window
 
     ```bash
-    dotnet run --project src/Demo.Web
+    cd src
+    dotnet dev-certs https --trust 
+    dotnet run --project Demo.Web
     ```
+
+
+## Helpful LInks
+
+### HeyAPI
+
+- [HeyAPI Documentation](https://heyapi.io/docs)
+
+A tool to generate an API client from a swagger / OpenAPI spec.
