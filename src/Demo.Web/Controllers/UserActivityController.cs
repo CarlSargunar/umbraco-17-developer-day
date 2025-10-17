@@ -6,7 +6,7 @@ using Umbraco.Cms.Core.Services;
 namespace Demo.Backoffice.Controllers;
 
 [VersionedApiBackOfficeRoute("user-activity")]
-[ApiExplorerSettings(GroupName = "User Activity API")]
+[ApiExplorerSettings(GroupName = "Demo User Activity API")]
 public class UserActivityController : ManagementApiControllerBase
 {
     private readonly IAuditService _auditService;
